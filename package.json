@@ -1,0 +1,30 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Augur.wiki server for handling requests and developer endpoint.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/augur-wiki/server.git"
+  },
+  "keywords": [
+    "augur",
+    "wiki",
+    "server",
+    "endpoint",
+    "dev",
+    "access"
+  ],
+  "author": "Anish Agnihotri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/augur-wiki/server/issues"
+  },
+  "homepage": "https://github.com/augur-wiki/server#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
