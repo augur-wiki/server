@@ -8,7 +8,7 @@
     "build": "tsc",
     "prestart": "npm run build",
     "dev:start": "npm-run-all build start",
-    "dev": "nodemon --watch src -e ts --exec npm run dev:start",
+    "dev": "nodemon -e ts -w ./src -x npm run dev:start",
     "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -30,11 +30,11 @@
   },
   "homepage": "https://github.com/augur-wiki/server#readme",
   "dependencies": {
+    "axios": "^0.18.0",
     "cryptocompare": "^1.0.0",
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
     "node-fetch": "^2.3.0",
-    "nodemon": "^1.18.10",
     "pg": "^7.8.2",
     "pg-promise": "^8.6.3"
   },
