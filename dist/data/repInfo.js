@@ -8,15 +8,11 @@ const axios_1 = __importDefault(require("axios"));
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
 function repRequest() {
-    function handleResponse() {
-        const price = 0;
-        return price;
-    }
-    /*
-    const handleResponse = (response: AxiosResponse) => {
-        const price: number = 0;
-        return price;
-    };*/
+    const handleResponse = (response) => {
+        const price = response.data.RAW.REP.USD.PRICE;
+        // tslint:disable-next-line:no-console
+        console.log(price);
+    };
     const handleError = (response) => {
         // tslint:disable-next-line:no-console
         console.log("there has been an eror");

@@ -7,15 +7,12 @@ dotenv.config();
 
 export function repRequest() {
 
-    function handleResponse() {
-        const price: number = 0;
-        return price;
-    }
-    /*
     const handleResponse = (response: AxiosResponse) => {
-        const price: number = 0;
-        return price;
-    };*/
+
+        const price = response.data.RAW.REP.USD.PRICE;
+        // tslint:disable-next-line:no-console
+        console.log(price);
+    };
 
     const handleError = (response: AxiosError) => {
         // tslint:disable-next-line:no-console

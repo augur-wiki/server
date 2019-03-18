@@ -16,7 +16,7 @@ app.get( "/", ( req, res ) => {
 
 app.get( "/rep", ( req, res ) => {
     // tslint:disable-next-line:no-console
-    console.log(repRequest());
+    repRequest();
 } );
 
 // start the Express server
