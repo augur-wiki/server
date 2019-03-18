@@ -8,10 +8,17 @@ dotenv.config();
 export function repRequest() {
 
     const handleResponse = (response: AxiosResponse) => {
-
-        const price = response.data.RAW.REP.USD.PRICE;
+        const repInfo = {
+            update: response.data.RAW.REP.USD.LASTUPDATE,
+            price: response.data.RAW.REP.USD.PRICE,
+            priceChange: response.data.RAW.REP.USD.CHANGEPCT24HOUR,
+            lowDay: response.data.RAW.REP.USD.LOW24HOUR,
+            highDay: response.data.RAW.REP.USD.HIGH24HOUR,
+            marketCap: response.data.RAW.REP.USD.MKTCAP,
+            volume: response.data.RAW.REP.USD.TOTALVOLUME24H
+        };
         // tslint:disable-next-line:no-console
-        console.log(price);
+        console.log(repInfo);
     };
 
     const handleError = (response: AxiosError) => {
