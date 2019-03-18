@@ -17,8 +17,7 @@ export function repRequest() {
             marketCap: response.data.RAW.REP.USD.MKTCAP,
             volume: response.data.RAW.REP.USD.TOTALVOLUME24H
         };
-        // tslint:disable-next-line:no-console
-        console.log(repInfo);
+        return repInfo;
     };
 
     const handleError = (response: AxiosError) => {
